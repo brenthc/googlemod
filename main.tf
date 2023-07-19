@@ -12,6 +12,7 @@ provider "random" {
 }
 
 module "project-factory" {
+  count = 0
   source  = "terraform-google-modules/project-factory/google"
   version = "2.4.1"
 
