@@ -16,10 +16,10 @@ resource "null_resource" "n" {
   triggers = {
     uuid = "${uuid()}"
   }
-*/
   provisioner "local-exec" {
     command = "ls -alR"
   }
+*/
 }
 
 module "project-factory" {
