@@ -11,7 +11,14 @@ provider "random" {
   version = "2.2.1"
 }
 
-resource "null_resource" "n" {}
+resource "null_resource" "n" {
+  triggers = {
+    uuid = uuid()
+  }
+  provisioner "local-exec" {
+    command = "ls -alR"
+  }
+}
 
 module "project-factory" {
   source  = "terraform-google-modules/project-factory/google"
