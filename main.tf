@@ -11,8 +11,9 @@ provider "random" {
   version = "2.2.1"
 }
 
+resource "null_resource" "n" {}
+
 module "project-factory" {
-  count = 0
   source  = "terraform-google-modules/project-factory/google"
   version = "2.4.1"
 
